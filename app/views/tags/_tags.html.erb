@@ -4,20 +4,23 @@
             <div class="row">
               <div class="col-lg-6">
                 <ul class="list-unstyled mb-0">
-                  <li>
-                    <%= link_to @tags.sample.name, tag_path(ActsAsTaggableOn::Tag.find_by_name(@tags.sample.name)) %>
+                  <% if (@tags.sample) %>
+                                    <li>
+ <%= link_to @tags.sample.name, tag_path(ActsAsTaggableOn::Tag.find_by_name(@tags.sample.name)) %>
+                  </li>
+ <li>
+ <%= link_to @tags.sample.name, tag_path(ActsAsTaggableOn::Tag.find_by_name(@tags.sample.name)) %>
                   </li>
                   <li>
-                    <%= link_to @tags.sample.name, tag_path(ActsAsTaggableOn::Tag.find_by_name(@tags.sample.name)) %>
+ <%= link_to @tags.sample.name, tag_path(ActsAsTaggableOn::Tag.find_by_name(@tags.sample.name)) %>
                   </li>
-                  <li>
-                    <%= link_to @tags.sample.name, tag_path(ActsAsTaggableOn::Tag.find_by_name(@tags.sample.name)) %>
-                  </li>
+                  <% end %>
                 </ul>
               </div>
               <div class="col-lg-6">
                 <ul class="list-unstyled mb-0">
-                  <li>
+                <% if (@tags.sample) %>
+ <li>
                     <%= link_to @tags.sample.name, tag_path(ActsAsTaggableOn::Tag.find_by_name(@tags.sample.name)) %>
                   </li>
                   <li>
@@ -26,6 +29,7 @@
                   <li>
                     <%= link_to @tags.sample.name, tag_path(ActsAsTaggableOn::Tag.find_by_name(@tags.sample.name)) %>
                   </li>
+                  <% end %>
                 </ul>
               </div>
             </div>
