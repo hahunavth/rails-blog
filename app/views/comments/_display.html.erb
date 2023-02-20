@@ -1,18 +1,18 @@
 
-<div class="row bootstrap snippets d-flex justify-content-center mt-2 w-100">
-    <div class="col-md-6 col-md-offset-2 col-sm-12">
+<div class="row bootstrap snippets d-flex justify-content-center mt-2 w-100" style="margin-top: 12px;">
+    <%# <div class="col-md-6 col-md-offset-2 col-sm-12"> %>
         <div class="comment-wrapper">
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    Comments
+                    Comments (<%= @post.comments.count %>)
                 </div>
                 <div class="panel-body">
                     <%= render 'comments/form' %>
-                    <div class="panel-heading">
-                        This movie has 
-                        <%= @post.comments.count %>
+                    <%# <div class="panel-heading">
+                        This post has
+
                         comments
-                    </div>                    
+                    </div> %>
                     <ul class="media-list">
                     <% @post.comments.each do |comment| %>
                         <li class="media">
@@ -26,10 +26,10 @@
                                 </p>
                             </div>
                         </li>
-                    <% end %>                            
+                    <% end %>
                     </ul>
                 </div>
             </div>
         </div>
-    </div>
+    <%# </div> %>
 </div>

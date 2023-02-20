@@ -1,7 +1,10 @@
 <% provide(:title, "Tags") %>
-<h1><%= @tag.name %></h1>
-<ul>
-<% @posts.each do |post| %>
-    <li><%= link_to post.title, post_path(post) %></li>
-<% end %>
-</ul>
+
+<div class="container" style="min-height: 75vh">
+    <h2>Tag name: <i><%= @tag.name %></i></h2>
+    <ol>
+    <% @posts.each do |post| %>
+        <li><%= link_to post.title + " - " + post.user.username, post_path(post) %></li>
+    <% end %>
+    </ol>
+</div>
